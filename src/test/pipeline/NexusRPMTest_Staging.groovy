@@ -1,5 +1,5 @@
 node {
-    sh "rm -f *"
+    sh "rm -f *.rpm"
     env.TIMESTAMP = new Date().time
     writeFile(file: 'sample', text: "this is a test file")
     sh "/usr/local/bin/fpm -s dir -t rpm -n nexus-test -v ${TIMESTAMP} -a all ."

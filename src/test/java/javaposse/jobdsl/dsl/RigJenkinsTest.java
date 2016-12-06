@@ -39,8 +39,8 @@ public class RigJenkinsTest {
         assertSuccessfulBuild("NexusRPMTest_Release.groovy");
     }
 
-    private void assertSuccessfulBuild(String pipeline) throws IOException {
-        BuildWithDetails details = client.executePipeline(Paths.get("./src/test/pipeline/" + pipeline));
+    private void assertSuccessfulBuild(final String pipeline) throws IOException {
+        final BuildWithDetails details = client.executePipeline(Paths.get("./src/test/pipeline/" + pipeline));
         System.out.println(details.getConsoleOutputText());
         assertEquals(SUCCESS, details.getResult());
     }
@@ -48,5 +48,10 @@ public class RigJenkinsTest {
     @Test
     public void testDockerBuild() throws Exception {
         assertSuccessfulBuild("DockerBuildTest.groovy");
+    }
+
+    @Test
+    public void testNodeWithDocker() throws Exception {
+        assertSuccessfulBuild("NodeDockerTest.groovy");
     }
 }
