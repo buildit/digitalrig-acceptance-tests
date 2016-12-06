@@ -17,7 +17,7 @@
     "serve:dist": "webpack-dev-server --open --env dist -p --progress",
     "start": "npm run serve:dev",
     "test": "cross-env NODE_ENV=test karma start",
-    "test:e2e": "mocha --require babel-register --require babel-polyfill --recursive acceptance/specs",
+    "test:e2e": "mocha --timeout 20000 --require babel-register --require babel-polyfill --recursive acceptance/specs",
     "test:watch": "cross-env NODE_ENV=test karma start --autoWatch=true --singleRun=false --reporters=mocha,coverage"
   },
   "repository": "",
