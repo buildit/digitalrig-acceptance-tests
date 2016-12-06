@@ -10,7 +10,7 @@ import static com.google.common.base.Throwables.propagate;
 
 public class JobDslWriter {
 
-    public String writeJobXml(final String jobScript, final Map<String, Object> parameters) {
+    public String writeJobXml(final String jobScript, final Map<String, ?> parameters) {
         final MemoryJobManagement management = new MemoryJobManagement();
         management.getParameters().putAll(parameters);
         GeneratedItems result = null;

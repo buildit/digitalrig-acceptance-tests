@@ -1,21 +1,12 @@
 == Target use cases
 
-. Rig post upgrade acceptance tests execution
+. Jenkins CI post upgrade acceptance tests execution
 . Pipeline scripts TDD
 . Pipeline library compatability testing against target server
 
-== TODOs:
-
-. create helper class to execute and assert arbitrary jobs
-.. executePipeline(pipeline: Path): BuildDetails
-.. Goes to base junit class >>> assertSuccessfulPipeline(pipeline: Path) void
-.. Write real nexus test (create empty rpm, deploy rpm, cleanup)
-. create and start jenkins job
-. wait for completion
-. success/fail the test
-
 == Possible improvements
 
-. in-process assertions?
-. allow out of pipeline assertions?
-. use annotation / junit rule to deploy jobs?
+. in-process assertions
+. client-side assertions support
+. stream build output
+. use annotation / junit rule to deploy jobs
