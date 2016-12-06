@@ -54,4 +54,9 @@ public class RigJenkinsTest {
     public void testNodeWithDocker() throws Exception {
         assertSuccessfulBuild("NodeDockerTest.groovy");
     }
+
+    @Test
+    public void testMaven() throws Exception {
+        assertSuccessfulBuild("MavenVersionTest.groovy");
+    }
 }
