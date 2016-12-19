@@ -14,11 +14,13 @@ import static junit.framework.TestCase.assertEquals;
 
 public class RigJenkinsTest {
 
+    private static final String JENKINS_URL = "http://localhost:9000/jenkins";
     private RemoteJenkinsPipelineClient client;
 
     @Before
     public void setUp() throws Exception {
-        client = new RemoteJenkinsPipelineClient("http://jenkins.localrig:9000/jenkins", System.out);
+        String jenkinsUrl = System.getProperty("jenkins.target.url", JENKINS_URL);
+        client = new RemoteJenkinsPipelineClient(jenkinsUrl, System.out);
     }
 
     @Test

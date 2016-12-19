@@ -3,7 +3,7 @@
 == Target use cases
 
 . Jenkins CI post upgrade acceptance tests execution
-. Pipeline scripts TDD
+. Pipeline scripts TDD (it should work faster than embadded jenkins start / stop)
 . Pipeline library compatability testing against target server
 
 == Features
